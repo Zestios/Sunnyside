@@ -1,0 +1,19 @@
+fieldLayouts:
+  727772d8-8567-4299-8494-e18b09994f36:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 8ff221c4-766b-4f80-b522-5e6180c5c1f5 # Social links
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Social Links'
+        sortOrder: 1
+handle: socialLinks
+name: 'Social Links'
+sortOrder: 7

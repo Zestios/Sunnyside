@@ -1,0 +1,183 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{% set siteLang = (craft.app.language |slice(0,2) == 'fr') ? '' : craft.app.language |slice(0,2) %}
+{% set baseUrl = alias('@baseUrl') ~ '/' %}
+{% set staticAssetsVersion = craft.app.config.general.custom.staticAssetsVersion %}
+{% set devMode = craft.app.config.general.devMode %}
+{%- import "_macros/snippet" as snippet -%}
+{%- minify -%}
+{% header "Link: <#{baseUrl}>; rel=dns-prefetch;,<#{baseUrl}>; rel=preconnect; crossorigin;" %}
+<!DOCTYPE html>
+{%- endminify -%}
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=1/" -->
+<html class="fonts-loaded" lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" code-version="{{ craft.app.config.general.custom.codeVersion }}">
+<!--#else -->
+<html lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" code-version="{{ craft.app.config.general.custom.codeVersion }}">
+<!--#endif -->
+{%- minify -%}
+<head>
+  <link rel="dns-prefetch" href="{{ baseUrl }}">
+  <link rel="preconnect" href="{{ baseUrl }}" crossorigin>
+
+  {# -- Any <link> tags that should be included in the header #}
+  {% block _head_links %}
+  {% endblock %}
+
+  {% include "_layouts/_global_header.twig" %}
+
+  {# -- ServiceWorker, loadjs, and tiny-cookie -- #}
+  <script>
+    {% if craft.app.config.general.isSystemLive %}
+      {{ source("_inlinejs/register-service-worker.min.js") }}
+    {% endif %}
+    {{ source("_inlinejs/loadjs.min.js") }}
+    {{ source("_inlinejs/tiny-cookie.min.js") }}
+    {{ source("_inlinejs/tab-handler.min.js") }}
+  </script>
+  {%- endminify -%}
+  {# -- CRITICAL CSS -- #}
+  {% if craft.app.config.general.custom.craftEnv == 'production' %}
+  <!--#if expr="$HTTP_COOKIE=/critical\-css\={{ staticAssetsVersion }}/" -->
+  <link rel="stylesheet" href="{{ baseUrl }}css/site.combined.min{{ not devMode ? '.' ~ staticAssetsVersion }}.css">
+  <!--#else -->
+  <script>
+    Cookie.set("critical-css", {{ staticAssetsVersion }}, {expires: "7D", secure: true});
+  </script>
+  {# -- Inline CSS block used by templates for Critical CSS #}
+  {% block _inline_css %}
+  {% endblock %}
+  <link rel="preload" href="{{ baseUrl }}css/site.combined.min{{ not devMode ? '.' ~ staticAssetsVersion }}.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="{{ baseUrl }}css/site.combined.min{{ not devMode ? '.' ~ staticAssetsVersion }}.css">
+  </noscript>
+  <script>
+    {{ source("_inlinejs/loadCSS.min.js") }}
+    {{ source("_inlinejs/cssrelpreload.min.js") }}
+  </script>
+  <!--#endif -->
+  {% else %}
+    <link rel="stylesheet" href="{{ baseUrl }}css/site.combined.min{{ not devMode ? '.' ~ staticAssetsVersion }}.css">
+  {% endif %}
+  {%- minify -%}
+    {# -- PictureFill polyfill -- #}
+    <script>
+      var testImg = document.createElement("img");
+      if (!("srcset" in testImg) || !("sizes" in testImg)) {
+        document.createElement("picture");
+        var s = document.createElement("script");
+        s.setAttribute("src", "{{ baseUrl }}js/picturefill.min{{ not devMode ? '.' ~ staticAssetsVersion }}.js");
+        if ("async" in s)
+          s.setAttribute("async", true);
+        document.head.appendChild(s);
+      }
+    </script>
+  {%- endminify -%}
+  {# -- FontFaceObserver -- #}
+  <!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=1/" -->
+  <!--#else -->
+  <script>
+    {{ source("_inlinejs/fontfaceobserver.min.js") }}
+    {{ source("_inlinejs/asyncload-site-fonts.min.js") }}
+  </script>
+  <!--#endif -->
+  {%- minify -%}
+
+  {# -- Inline JS -- #}
+  <script type="text/javascript">
+    var staticAssetsVersion = "{{ staticAssetsVersion }}";
+    var assetsBaseUrl = "{{ baseUrl }}";
+    var retina = window.devicePixelRatio > 1;
+  </script>
+
+  {# -- </head> JS -- #}
+  {% block _head_js %}
+  {% endblock %}
+</head>
+
+{# -- HTML Body -- #}
+<body>
+  <div id="site-container" class="site-container {{ pageClass is defined ? pageClass : '' }}">
+
+    {# -- Info header, including _navbar.twig -- #}
+    {% include "_partials/header.twig" %}
+
+    {# -- Main site grid -- #}
+    <main class="main">
+      {# -- Primary content block -- #}
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    {# -- Info footer -- #}
+    {% include "_partials/footer.twig" %}
+
+  </div>
+
+  {# -- Cookie policy -- #}
+  {% include "_partials/cookie-policy.twig" %}
+
+  {# -- Scripts/etc -- #}
+  {% include "_layouts/_global_footer.twig" %}
+
+  {% if devMode %}
+    <div class="custom-git-branch">
+      <svg width="24" height="24" viewBox="0 0 24 24" role="presentation"><path d="M19 11c0 1.3-.8 2.4-2 2.8V15c0 2.2-1.8 4-4 4h-2.2c-.4 1.2-1.5 2-2.8 2-1.7 0-3-1.3-3-3 0-1.3.8-2.4 2-2.8V8.8C5.9 8.4 5 7.3 5 6c0-1.7 1.3-3 3-3s3 1.3 3 3c0 1.3-.8 2.4-2.1 2.8v6.4c.9.3 1.6.9 1.9 1.8H13c1.1 0 2-.9 2-2v-1.2c-1.2-.4-2-1.5-2-2.8 0-1.7 1.3-3 3-3s3 1.3 3 3zM8 5c-.5 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1zm8 7c.6 0 1-.4 1-1s-.4-1-1-1-1 .4-1 1 .4 1 1 1zm-8 7c.6 0 1-.4 1-1s-.4-1-1-1-1 .4-1 1 .4 1 1 1z" fill="currentColor" fill-rule="evenodd"></path></svg>
+      <span>{{ craft.siteModule.getCurrentBranch }}</span>
+    </div>
+  {% endif %}
+
+  <script src="{{ baseUrl }}js/site.combined.min{{ not devMode ? '.' ~ staticAssetsVersion }}.js"></script>
+
+  {# -- App component JS instantiation -- #}
+  <script>
+    site.App.init({
+      env: "{{ craft.app.config.general.custom.craftEnv }}",
+      csrf: "{{ craft.app.request.csrfToken|e('js') }}",
+      csrfName: "{{ craft.app.config.general.csrfTokenName|e('js') }}",
+      locale: "{{ craft.app.language }}",
+      device: "{% if craft.app.request.isMobileBrowser() %}mobile{% else %}desktop{% endif %}",
+      preview: {% if craft.app.request.isLivePreview %}true{% else %}false{% endif %},
+      staticAssetsVersion: "{{ staticAssetsVersion }}",
+      assetsBaseUrl: "{{ baseUrl }}",
+      retina: window.devicePixelRatio > 1,
+      general: {
+        googleMaps: "{{ craft.app.config.general.apiKeys.googleMaps }}"
+      }
+    });
+  </script>
+
+  {# -- VueJS & Axios, along with our main app component instantiation -- #}
+  <script>
+      // define a dependency bundle
+      loadjs(
+          [
+              '{{ baseUrl }}js/vue.min{{ not devMode ? '.' ~ staticAssetsVersion }}.js',
+          ],
+          'vue'
+      );
+      loadjs(
+          [
+              '{{ baseUrl }}js/axios.min{{ not devMode ? '.' ~ staticAssetsVersion }}.js',
+          ],
+          'axios'
+      );
+      loadjs(
+          [
+              '{{ baseUrl }}js/lazysizes.min{{ not devMode ? '.' ~ staticAssetsVersion }}.js',
+          ],
+          'lazysizes'
+      );
+      loadjs.ready(['vue', 'axios', 'lazysizes'], {
+          success: function() {
+              // Use Axios as our http client
+              Vue.prototype.$http = axios;
+          }
+      });
+  </script>
+
+  {# -- Inline JS -- #}
+  {% block _inline_js %}
+  {% endblock %}
+
+  {%- endminify -%}
+</body>
+</html>

@@ -1,0 +1,64 @@
+pipelines:
+  branches:
+    main:
+      - step:
+          name: Build test environment
+          image: pyguerder/bitbucket-pipelines-php80:mysql5
+          script:
+            # Install Cypress dependencies
+            - apt-get update
+            - yes | apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+            # Prepare configuration
+            - mkdir /opt/atlassian/pipelines/agent/build/storage/logs
+            - rm public/.htaccess
+            - ln -f -s pipelines/.env.pipelines .env
+            - ln -f -s pipelines/.env.sh.pipelines .env.sh
+            - ln -f -s pipelines/.htaccess.pipelines .htaccess
+            # Update Node to 14 and install NPM
+            - curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+            - bash nodesource_setup.sh
+            - yes | apt install nodejs
+            - npm install
+            # Generate assets
+            - npm run generate
+            - npm run build
+            # Configure Apache
+            - cp pipelines.conf /etc/apache2/sites-enabled/001-pipelines.conf
+            - a2enmod rewrite && apachectl restart
+            # Start and import database
+            - service mysql start
+            - mysql -h localhost -u root -proot -e "CREATE USER 'craftcms'@'localhost' IDENTIFIED BY 'secret';"
+            - mysql -h localhost -u root -proot -e "GRANT ALL PRIVILEGES ON * . * TO 'craftcms'@'localhost';"
+            - mysql -h localhost -u root -proot -e "FLUSH PRIVILEGES;"
+            - mysql -h localhost -u craftcms -psecret -e "CREATE DATABASE app_db;"
+            - mysql -h localhost -u craftcms -psecret -D app_db < "docs/database/craft-base-2021--2022-02-24-195441--v3.7.34.sql"
+            # Install Composer dependencies
+            - composer install --no-scripts --no-interaction --no-progress --prefer-dist
+            # Sync database and assets from Production
+            - ln -f -s vendor/nystudio107/craft-scripts/scripts scripts
+            - ln -f -s /opt/atlassian/pipelines/agent/build/.env.sh scripts/.env.sh
+            - bash pull.sh
+            # Finalize installation
+            - composer install --no-interaction --no-progress --prefer-dist
+            - chown -R www-data:www-data .
+            # E2E Testing
+            - ./node_modules/.bin/cypress run --env host=http://localhost/
+          artifacts:
+            # store any generates images and videos as artifacts
+            - cypress/screenshots/**
+            - cypress/videos/**
+      - step:
+          name: Deploy to production
+          image: atlassian/default-image:2
+          deployment: production
+          script:
+            - pipe: atlassian/ssh-run:0.2.2
+              variables:
+                SSH_USER: 'REPLACE_ME'
+                SERVER: 'REPLACE_ME'
+                COMMAND: '/srv/users/REPLACE_ME/apps/REPLACE_ME/deploy.sh'
+
+definitions:
+  caches:
+    npm: $HOME/.npm
+    cypress: $HOME/.cache/Cypress

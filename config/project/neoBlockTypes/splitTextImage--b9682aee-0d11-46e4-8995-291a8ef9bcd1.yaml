@@ -1,0 +1,24 @@
+childBlocks: ''
+field: 27e3013b-58ea-47ac-893a-9946606fcc55
+fieldLayouts:
+  72a440d8-ec96-4e84-a122-1638931e8e7c:
+    tabs:
+      -
+        fields:
+          3a3c64b6-a0a7-4ea6-ab89-4b7e5eff9208:
+            required: false
+            sortOrder: 3
+          6fa98816-f710-40b3-960e-f19c5b0e45c0:
+            required: false
+            sortOrder: 2
+          19c73d15-31c6-4ed5-bd19-92193123b040:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+handle: splitTextImage
+maxBlocks: 0
+maxChildBlocks: 0
+name: 'Split Text & Image'
+sortOrder: 6
+topLevel: true

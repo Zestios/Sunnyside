@@ -1,0 +1,134 @@
+field: 8ff221c4-766b-4f80-b522-5e6180c5c1f5 # Social links
+fieldLayouts:
+  25f4628f-c6dc-4977-a10d-6ee18a522e34:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 2db661bd-0e8b-4444-81fd-8af9d37e9d72 # Facebook Link
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: eed3d787-b010-426a-92c7-6adf3b5815e5 # Twitter Link
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2085025d-9cef-4abc-8f08-659d7bc829c6 # Linkedin Link
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 82816d6b-bc9a-4c1c-b124-d821fabf5354 # Instagram Link
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6bdacf22-9a93-48a3-a444-f4ca8786cb5c # Youtube Link
+            instructions: null
+            label: null
+            required: '0'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2db661bd-0e8b-4444-81fd-8af9d37e9d72: # Facebook Link
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: facebookLink
+    instructions: ''
+    name: 'Facebook Link'
+    searchable: true
+    settings:
+      maxLength: 255
+      placeholder: ''
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  6bdacf22-9a93-48a3-a444-f4ca8786cb5c: # Youtube Link
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: youtubeLink
+    instructions: ''
+    name: 'Youtube Link'
+    searchable: true
+    settings:
+      maxLength: 255
+      placeholder: ''
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  82816d6b-bc9a-4c1c-b124-d821fabf5354: # Instagram Link
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: instagramLink
+    instructions: ''
+    name: 'Instagram Link'
+    searchable: true
+    settings:
+      maxLength: 255
+      placeholder: ''
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  2085025d-9cef-4abc-8f08-659d7bc829c6: # Linkedin Link
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: linkedinLink
+    instructions: ''
+    name: 'Linkedin Link'
+    searchable: true
+    settings:
+      maxLength: 255
+      placeholder: ''
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  eed3d787-b010-426a-92c7-6adf3b5815e5: # Twitter Link
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: twitterLink
+    instructions: ''
+    name: 'Twitter Link'
+    searchable: true
+    settings:
+      maxLength: 255
+      placeholder: ''
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url

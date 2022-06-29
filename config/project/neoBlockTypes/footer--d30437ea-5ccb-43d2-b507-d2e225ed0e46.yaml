@@ -1,0 +1,18 @@
+childBlocks: ''
+field: 27e3013b-58ea-47ac-893a-9946606fcc55
+fieldLayouts:
+  158dbd5a-e349-42c6-b48c-452fab4d3acd:
+    tabs:
+      -
+        fields:
+          92724e80-3861-4082-9481-a26529d9d932:
+            required: false
+            sortOrder: 1
+        name: 'Building Blocks - Content'
+        sortOrder: 1
+handle: footer
+maxBlocks: 1
+maxChildBlocks: 0
+name: Footer
+sortOrder: 8
+topLevel: true

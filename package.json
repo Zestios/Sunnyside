@@ -1,0 +1,214 @@
+{
+  "name": "sunnyside",
+  "version": "1.0.0",
+  "description": "Website for sunnyside",
+  "main": "gulpfile.js",
+  "author": "byhoffman, <devs+sunnyside@agencehoffman.com>",
+  "copyright": "Agence Hoffman",
+  "license": "UNLICENSED",
+  "private": true,
+  "paths": {
+    "src": {
+      "base": "./src/",
+      "css": "./src/css/",
+      "fonts": "./src/fonts/",
+      "img": "./src/img/",
+      "json": "./src/json/",
+      "js": "./src/js/",
+      "scss": "./src/scss/"
+    },
+    "dist": {
+      "base": "./public/",
+      "css": "./public/css/",
+      "js": "./public/js/",
+      "fonts": "./public/fonts/",
+      "img": "./public/img/"
+    },
+    "build": {
+      "base": "./build/",
+      "css": "./build/css/",
+      "fonts": "./build/fonts/",
+      "js": "./build/js/",
+      "customJs": "./build/js/custom/",
+      "html": "./build/html/",
+      "img": "./build/img/"
+    },
+    "favicon": {
+      "src": "./src/img/favicon_src.png",
+      "dest": "./public/img/site/",
+      "path": "/img/site/"
+    },
+    "scss": [],
+    "craftConfig": "./config/",
+    "templates": "./templates/",
+    "translations": "./translations/"
+  },
+  "urls": {
+    "live": "https://sunnyside.com/",
+    "local": "http://sunnyside.test/",
+    "critical": "http://sunnyside.test/"
+  },
+  "vars": {
+    "siteCssName": "site.combined.min.css",
+    "scssName": "app.scss",
+    "cssName": "style.css",
+    "siteJsName": "site.combined.min.js"
+  },
+  "globs": {
+    "distCss": [
+      "./build/css/*.css"
+    ],
+    "img": [
+      "./public/img/"
+    ],
+    "components": [],
+    "fonts": [
+      "./src/fonts/*.{eot,ttf,woff,woff2}"
+    ],
+    "purgecss": [
+      "./templates/**/*.{html,twig}"
+    ],
+    "purgecssWhitelist": [],
+    "critical": [
+      {
+        "url": "offline",
+        "template": "offline"
+      },
+      {
+        "url": "error",
+        "template": "error"
+      },
+      {
+        "url": "503",
+        "template": "503"
+      },
+      {
+        "url": "404",
+        "template": "404"
+      },
+      {
+        "url": "",
+        "template": "index"
+      },
+      {
+        "url": "politique-dutilisation-des-cookies",
+        "template": "_pages/cookie-policy"
+      }
+    ],
+    "criticalWhitelist": [],
+    "download": [
+      {
+        "url": "https://www.google-analytics.com/analytics.js",
+        "dest": "./public/js/"
+      }
+    ],
+    "distJs": [
+      "./build/js/*.js",
+      "./node_modules/axios/dist/axios.min.js",
+      "./node_modules/lazysizes/lazysizes.min.js",
+      "./node_modules/lazysizes/plugins/bgset/ls.bgset.min.js",
+      "./node_modules/picturefill/dist/picturefill.min.js",
+      "./node_modules/vue/dist/vue.min.js"
+    ],
+    "distJsDev": [
+      "./build/js/*.js",
+      "./node_modules/axios/dist/axios.min.js",
+      "./node_modules/lazysizes/lazysizes.min.js",
+      "./node_modules/lazysizes/plugins/bgset/ls.bgset.min.js",
+      "./node_modules/picturefill/dist/picturefill.min.js",
+      "./node_modules/vue/dist/vue.js"
+    ],
+    "distCustomJs": [
+      "./build/js/custom/**/*.js"
+    ],
+    "babelJs": [
+      "./src/js/*.js"
+    ],
+    "jsVendors": [
+      "./src/js/vendors/*.js"
+    ],
+    "babelCustomJs": [
+      "./src/js/modules/**/*.js"
+    ],
+    "inlineJs": [
+      "./node_modules/fg-loadcss/src/loadCSS.js",
+      "./node_modules/fg-loadcss/src/cssrelpreload.js",
+      "./node_modules/fontfaceobserver/fontfaceobserver.js",
+      "./node_modules/loadjs/dist/loadjs.min.js",
+      "./node_modules/tiny-cookie/tiny-cookie.min.js",
+      "./src/js/tab-handler.js",
+      "./src/js/register-service-worker.js",
+      "./src/js/asyncload-site-fonts.js"
+    ],
+    "siteIcon": "./public/img/site/favicon.*"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "eslint": "^5.3.0",
+    "fg-loadcss": "^1.2.0",
+    "fontfaceobserver": "^2.0.5",
+    "lazysizes": "^2.0.6",
+    "loadjs": "^3.3.1",
+    "normalize.css": "^5.0.0",
+    "picturefill": "^3.0.2",
+    "tiny-cookie": "^1.0.1",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "chalk": "^1.1.3",
+    "critical": "^1.3.10",
+    "cypress": "^9.4.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^2.0.7",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^3.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "fancy-log": "^1.2.0",
+    "git-rev-sync": "^1.7.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-favicons": "^3.0.0",
+    "gulp-filter": "^7.0.0",
+    "gulp-header": "^2.0.9",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-print": "^5.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^4.1.0",
+    "gulp-size": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "moment": "^2.14.1",
+    "pa11y": "^4.13.2"
+  },
+  "scripts": {
+    "serve": "node ./node_modules/gulp/bin/gulp.js serve",
+    "build": "node ./node_modules/gulp/bin/gulp.js build",
+    "build:fast": "node ./node_modules/gulp/bin/gulp.js build:fast",
+    "generate": "node ./node_modules/gulp/bin/gulp.js generate",
+    "critical": "node ./node_modules/gulp/bin/gulp.js criticalcss",
+    "code-version": "node ./node_modules/gulp/bin/gulp.js code-version",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "cypress:open": "cypress open"
+  },
+  "bugs": {
+    "email": "registration@agencehoffman.com"
+  }
+}

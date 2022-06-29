@@ -1,0 +1,8 @@
+<div class="cookie-confirmation">
+  <div class="cookie-confirmation-inner">
+    {% set cookiePolicyPage = craft.entries.section('cookiePolicy').one %}
+    <p class="cookie-confirmation-text">{{ 'This site uses cookies. To find out more, see the'|t }} <a
+        href="{{ cookiePolicyPage.url }}" target="_blank" rel="noreferrer noopener">{{ cookiePolicyPage.title }}</a>.</p>
+    <div class="cookie-confirmation-buttons-area"><a href="#" class="confirmation-button">{{ 'Accept'|t }}</a></div>
+  </div>
+</div>

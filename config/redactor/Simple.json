@@ -1,0 +1,7 @@
+{
+	"buttons": ["bold", "italic","link", "unorderedlist"],
+	"toolbarFixed": true,
+  "linkNewTab": true,
+  "imageResizable": true,
+  "imagePosition": true
+}

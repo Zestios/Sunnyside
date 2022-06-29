@@ -1,0 +1,14 @@
+columnSuffix: dkecvpos
+contentColumnType: boolean
+fieldGroup: 2a67fafe-09dd-4dd9-ba28-37349c423d3b # Policies
+handle: enableSimplyPolicy
+instructions: ''
+name: 'Utiliser la politique "Standard"'
+searchable: false
+settings:
+  default: true
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

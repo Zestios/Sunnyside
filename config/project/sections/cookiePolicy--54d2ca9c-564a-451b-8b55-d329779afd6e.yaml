@@ -1,0 +1,26 @@
+defaultPlacement: end
+enableVersioning: false
+handle: cookiePolicy
+name: 'Cookie Policy'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  5d3331dc-808a-4628-bea6-b5504f0fcf32: # English
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/cookie-policy
+    uriFormat: cookie-policy
+  451b7d36-f0d8-4860-8bab-eb6756c9a9d6: # Français
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/cookie-policy
+    uriFormat: politique-dutilisation-des-cookies
+type: single

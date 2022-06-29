@@ -1,0 +1,27 @@
+// --------------------------------------------------
+// Import Fonts
+// --------------------------------------------------
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexaregular-webfont.woff2') format('woff2'),
+  url('/fonts/nexaregular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexabold-webfont.woff2') format('woff2'),
+  url('/fonts/nexabold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexaheavy-webfont.woff2') format('woff2'),
+  url('/fonts/nexaheavy-webfont.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}

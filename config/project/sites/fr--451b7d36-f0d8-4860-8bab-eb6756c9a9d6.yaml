@@ -1,0 +1,9 @@
+baseUrl: '@baseUrl/'
+enabled: true
+handle: fr
+hasUrls: true
+language: fr
+name: Français
+primary: true
+siteGroup: 70974535-ba2b-4447-a30c-4c60444a8285 # default
+sortOrder: 2

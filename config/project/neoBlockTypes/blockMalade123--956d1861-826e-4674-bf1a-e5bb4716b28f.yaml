@@ -1,0 +1,10 @@
+childBlocks:
+  - child1
+  - child2
+field: 27e3013b-58ea-47ac-893a-9946606fcc55
+handle: blockMalade123
+maxBlocks: 0
+maxChildBlocks: 0
+name: 'Block malade 123'
+sortOrder: 9
+topLevel: true

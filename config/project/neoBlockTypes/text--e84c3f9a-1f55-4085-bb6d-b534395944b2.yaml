@@ -1,0 +1,34 @@
+childBlocks: ''
+field: 27e3013b-58ea-47ac-893a-9946606fcc55
+fieldLayouts:
+  b0682d0c-245e-4ebb-b737-55a2eb0bdd6d:
+    tabs:
+      -
+        fields:
+          3a3c64b6-a0a7-4ea6-ab89-4b7e5eff9208:
+            required: false
+            sortOrder: 2
+          6fa98816-f710-40b3-960e-f19c5b0e45c0:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+      -
+        fields:
+          98a640de-6f7f-43ad-acb5-ea73b35e1eac:
+            required: false
+            sortOrder: 1
+          100ecd0f-cfbe-409d-9e41-8a54dce4af68:
+            required: false
+            sortOrder: 2
+          b8482c7f-30b1-48b7-a02b-4f388ced24c0:
+            required: false
+            sortOrder: 3
+        name: 'Building Blocks - Animation'
+        sortOrder: 2
+handle: text
+maxBlocks: 0
+maxChildBlocks: 0
+name: Text
+sortOrder: 3
+topLevel: true

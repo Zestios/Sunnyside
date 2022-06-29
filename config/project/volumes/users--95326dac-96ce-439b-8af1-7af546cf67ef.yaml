@@ -1,0 +1,40 @@
+fieldLayouts:
+  dbae8b82-9b28-45e7-94ff-032891f4bd22:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\AssetTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: users
+hasUrls: true
+name: users
+settings:
+  path: '@basePath/files/users'
+sortOrder: 3
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+type: craft\volumes\Local
+url: '@baseUrl/files/users'

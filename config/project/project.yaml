@@ -1,0 +1,590 @@
+dateModified: 1646841862
+email:
+  fromEmail: $EMAIL_SYSTEM_ADDRESS
+  fromName: $EMAIL_NAME_SENDER
+  replyToEmail: $EMAIL_REPLY_TO_ADDRESS
+  template: null
+  transportSettings:
+    encryptionMethod: tls
+    host: $EMAIL_HOST
+    password: $EMAIL_PASSWORD
+    port: $EMAIL_PORT
+    timeout: '10'
+    useAuthentication: '1'
+    username: $EMAIL_USER
+  transportType: craft\mail\transportadapters\Smtp
+meta:
+  __names__:
+    0ced9490-1851-45f4-9f6f-b31d1330bbc2: Question # Question
+    0e1ea7ab-6442-4707-a138-b4df1cdb7bfb: 'Journée fermé' # Journée fermé
+    0e9eaa34-8575-4c9d-a881-4a12cf41904a: Lien # Lien
+    0eab544f-85de-4bf4-9cee-18724f85b072: Titre # Titre
+    1b9d6fbc-b94a-4be5-bf6e-a7f623752826: 'Image de droite' # Image de droite
+    1bdebda6-9af9-47cf-b890-04d1d5829f14: Bouton # Bouton
+    1ca51d97-36a2-45f5-87e1-af898dc81e25: Image # Image
+    1d0551e5-3b19-49b8-892d-314b0b1af536: Accueil # Accueil
+    1ee4e52a-8999-4495-8ca5-bca457a83cd7: Image # Image
+    1f7b4f20-8f07-4c84-903a-348d6e09cd9d: Témoignages # Témoignages
+    2a45fc83-cfb3-47fe-8cbf-0304e182f344: 'Activer sur la page ?' # Activer sur la page ?
+    2a67fafe-09dd-4dd9-ba28-37349c423d3b: Policies # Policies
+    2abde05c-e6aa-4e4c-9021-ffa1a26f08ba: 'Cookie Policy' # Cookie Policy
+    2c82a4eb-140c-4679-8e72-4b9904fbbb7c: Icône # Icône
+    2d8601ae-762d-44df-b6cc-420c7cdd111c: 'Nom de l''étape' # Nom de l'étape
+    2db661bd-0e8b-4444-81fd-8af9d37e9d72: 'Facebook Link' # Facebook Link
+    2eefb633-115d-4904-a93e-5d7271a1fbdf: Titre # Titre
+    2ef3c639-dd3d-48ae-bb21-390072633d43: Entreprise # Entreprise
+    3b0b7790-cc82-4b75-954e-68c6cbe970c6: Name # Name
+    3cadac44-0ce8-4e1a-a559-8baf5b6e8ed8: pages # pages
+    3dc70310-b4fc-4f80-8ca2-4aa53ab8677d: 'Lignes de contenu' # Lignes de contenu
+    3de264ee-d429-46f4-b804-673f69c54b09: Bouton # Bouton
+    3f1bb77a-f4c6-4b4d-a694-c70fc58bf4ee: '404' # 404
+    4ae245f8-5f53-4d75-b99b-32b847b178a2: 'Heure d''ouverture' # Heure d'ouverture
+    4b1231e9-bf00-4ad7-8e24-cc8d1015596d: Titre # Titre
+    4c9f1dd9-4f85-46ca-85ab-284be0b3f203: Titre # Titre
+    4db350e7-e79e-4f2f-bad2-b293788e1596: 'Emplois en vedettes' # Emplois en vedettes
+    4e77be97-1d99-4354-965a-218f99856c94: Titre # Titre
+    4eec11f0-a208-46c6-a6e9-01d26feeb7f7: Accueil # Accueil
+    5b5249cd-e29b-46ec-a0a9-a23d52ca7e8c: 'URL du site web' # URL du site web
+    5d717f8f-585e-49f1-bcb6-12b2a7ccc8df: 'Bloc de texte' # Bloc de texte
+    5d3331dc-808a-4628-bea6-b5504f0fcf32: English # English
+    6bdacf22-9a93-48a3-a444-f4ca8786cb5c: 'Youtube Link' # Youtube Link
+    6bf5f3c7-43a1-46b2-903e-0fd278893cff: Description # Description
+    6c2e20a8-b407-42b8-a4a9-90e4248c834c: Titre # Titre
+    06c52ab2-16d9-4ba7-bcea-bc8f83c1cd01: Texte # Texte
+    06ce1bde-82e6-40bc-9b0a-eb14142c566d: Bouton # Bouton
+    6cefb49a-7432-4856-ad08-680898ed9cd1: 'Texte bleu' # Texte bleu
+    6d848aaa-22f6-48f1-87b0-2be0027f22ef: 'Contenu de la section' # Contenu de la section
+    6df19297-8283-4cc9-9bb2-a4c64045b5af: Texte # Texte
+    6e6c60db-2c2f-43b3-ae74-4e2df83fa0ac: 'Image grand format' # Image grand format
+    6ef662fd-5706-476b-89b6-ffc63b23aec1: Texte # Texte
+    06fd7ccb-989e-478d-85e6-8cf947d5526c: Titre # Titre
+    7b4a9043-3606-42e2-a374-049bb7e86b2f: 'Image (Pages Syndromes)' # Image (Pages Syndromes)
+    8b374af9-5353-4f43-98c3-0d7aa41e5746: Titre # Titre
+    8bcee030-fbf0-49a7-b370-6c43ce5f40d0: Réponse # Réponse
+    8d54cbc6-20f0-40ea-b822-b33d4bbf49ec: __blank__ # __blank__
+    8f4c6cf6-4d19-44b2-9f35-4dc679e9dbbf: Titre # Titre
+    08f7544e-3941-4b18-9f34-df210fa4ed4a: hero # hero
+    8ff4ec4c-0c23-4929-bc8a-dbe377b71f81: Image # Image
+    8ff221c4-766b-4f80-b522-5e6180c5c1f5: 'Social links' # Social links
+    9c7ef826-ea23-4e11-b5a9-e5c2d45eb3b7: 'Liste des arguments' # Liste des arguments
+    9ebae1f2-7c28-4e10-b576-10eee7d58891: Texte # Texte
+    11f8ac81-4208-4483-9621-d568151ccd32: 'Gros titre' # Gros titre
+    19aeb3e2-9c8e-4efc-822f-8a200340accf: Sous-titre # Sous-titre
+    19c3adfe-f277-4a0b-896c-0791e5d3c927: Links # Links
+    22d3d77b-1846-4925-ab35-1e1a92696282: Titre # Titre
+    23e16645-99f2-45b1-8862-058a61180522: Services # Services
+    24ab9003-fab8-48b7-9fa9-e80cf1c04beb: Link # Link
+    25c93bcb-c5bd-4828-8e6b-9efe82441b9b: Titre # Titre
+    25cc2880-04ae-4c51-892f-e066f2034aeb: 'Titre de la section' # Titre de la section
+    30ce5ec4-c947-4bf4-9f6c-356ae6a01330: 'Nom de l''auteur' # Nom de l'auteur
+    31b7b233-4eff-4e59-b7ab-b5059a172291: 'Nom de la section' # Nom de la section
+    34f7c7ba-1115-4df5-afa2-9fb51aff3169: 'Image détourée du produit (Desktop)' # Image détourée du produit (Desktop)
+    34fcd4ee-f824-4d69-a503-a45c72f53281: Texte # Texte
+    44b9e704-10c1-4ee9-855b-48fb76c60f16: Réponse # Réponse
+    50dd7953-6e1d-461d-a156-6ca9fb5e4fc2: Logos # Logos
+    53a95464-0dfa-4e8c-91e2-d674707bdf1b: Titre # Titre
+    54d2ca9c-564a-451b-8b55-d329779afd6e: 'Cookie Policy' # Cookie Policy
+    54d86482-3597-4807-8c48-f372d1f49f7e: 'Image (Hover)' # Image (Hover)
+    56bc41e9-c843-447e-930b-c94fb3c3d7cf: Titre # Titre
+    57f46692-35a2-448f-83b4-82892c458925: Texte # Texte
+    60fd6912-9014-4c76-9220-cff38663be6d: 'Nom de la valeur' # Nom de la valeur
+    64b9eb09-4d38-4bb2-9f75-0bbb7944b591: 'Public Schema' # Public Schema
+    68f450f4-3768-4edd-9c16-34e478a0e762: __blank__ # __blank__
+    69cbcc4f-deaa-4c74-a323-581a3dbe2d8c: Texte # Texte
+    69dc3429-9bb1-4a7a-8e43-567a2459704f: Texte # Texte
+    72e8fbd6-1ef8-4421-9dfd-8c52ca997e2b: 'Liste des entités' # Liste des entités
+    81f847ee-c904-4c7d-82ff-048ffa2301ff: Image # Image
+    84b34a63-4a05-404c-82ae-9800b52dc3db: Titre # Titre
+    84cf2378-5b92-4791-920d-63e23a8b82a8: Description # Description
+    85ee0f07-9b9d-4474-838e-302b1c5f9b1d: 'Liste des services' # Liste des services
+    91dd96a0-e886-4e57-8e8e-3507014f9640: documents # documents
+    0168e8c9-d1a6-4655-bbf3-c8c59d7d63dd: Lien # Lien
+    339b64c8-f849-4026-8c3d-20c46ed7706d: 'Image de droite' # Image de droite
+    357ad1db-fe45-459f-8527-b347da5cd28c: Valeurs # Valeurs
+    451b7d36-f0d8-4860-8bab-eb6756c9a9d6: Français # Français
+    454b097f-e993-412d-97e3-27cc29d832a9: 'Nom de l''élément' # Nom de l'élément
+    511ea0b0-d16f-4a19-97a6-5792559140bf: Titre # Titre
+    581cf072-d4a3-445f-9b3f-7438fea4f4a3: Bouton # Bouton
+    590c0406-d19a-49ad-91f8-fd45720f214e: Produits # Produits
+    619a80d4-18f1-4838-ba7e-27bc02e00f98: Texte # Texte
+    638b9f64-05d6-4f07-9f9d-44f74dceb9f2: 'Heure de fermeture' # Heure de fermeture
+    703e4311-abe3-496a-b197-553735954de8: Image # Image
+    720eed54-20ce-4a21-b2fa-c13ef475e65a: 'Fichier de documentation' # Fichier de documentation
+    739e9264-d093-4433-bc70-147bbbfc73e8: Texte # Texte
+    842d1db8-39e4-481a-af8d-a1f3e8c819fa: 'Courriel de contact' # Courriel de contact
+    925c9e42-345c-40e9-a08d-2f001c44117b: 'Icone de l''étape' # Icone de l'étape
+    956d1861-826e-4674-bf1a-e5bb4716b28f: 'Block malade 123' # Block malade 123
+    991adced-21af-4631-be63-e91a30fe3182: Titre # Titre
+    3075ec2d-d02a-49c1-a6f2-efad884eeeb5: Titre # Titre
+    3438cfc5-1d73-4599-8cf3-66ce9af89e60: Texte # Texte
+    4848bd63-40cb-4a74-a6b2-1115c475f114: Titre # Titre
+    5121d84b-b7a7-42f4-9a29-9145813b0f5a: Titre # Titre
+    7051ea05-741b-455a-ab58-2145dc86b225: Contenu # Contenu
+    7458b7b5-6613-4d01-820d-d21838c252e8: Header # Header
+    9001a42d-87d3-4d8d-a520-3886f52caf95: Globale # Globale
+    9979cc0c-0981-4ca9-a9fc-80ceed2f9df8: 'Titre de la question' # Titre de la question
+    18978b8e-1006-4057-a121-99d7a06b5cac: Témoignage # Témoignage
+    24443cd5-d9e3-4b2c-b450-352d02dea53d: Child2 # Child2
+    50696ca0-952a-47ad-82ab-679bcbde40ad: Titre # Titre
+    51997a10-b4b8-4b8e-b28e-e92048ca7513: 'Privacy Policy' # Privacy Policy
+    68731f8d-af7d-4f35-b0ee-0324e78f8804: share # share
+    82816d6b-bc9a-4c1c-b124-d821fabf5354: 'Instagram Link' # Instagram Link
+    86475fdf-9c7b-418a-b1f4-cc7019377a3a: Titre # Titre
+    95326dac-96ce-439b-8af1-7af546cf67ef: users # users
+    98996ba8-33c3-49b6-b4c5-1fba6b2d8c99: 'Activate newsletter form ?' # Activate newsletter form ?
+    561351ee-d9b3-4937-87c0-c56831641184: Description # Description
+    691219de-189c-4a55-94eb-bc49a993e651: Bouton # Bouton
+    0794371d-9e48-438b-9772-a676ac25922b: Image # Image
+    957708cf-ce7c-45e9-a072-b8a14c339322: Link # Link
+    2085025d-9cef-4abc-8f08-659d7bc829c6: 'Linkedin Link' # Linkedin Link
+    3785452e-db9e-4441-8f42-13124855e9f5: 'Trouver une clinique' # Trouver une clinique
+    6417223c-5a41-4451-9d0b-6b77b3888c87: Titre # Titre
+    06658584-2ee6-420b-814d-a0ed2f839c3f: 'Bloc de texte' # Bloc de texte
+    9088516f-bea7-4437-93fe-ad790266c8e4: Titre # Titre
+    31150515-f61e-4ef5-b063-fa5f834f0419: Bouton # Bouton
+    35639511-2c75-4ade-9fa3-d2951844e21e: Texte # Texte
+    40019752-8625-4b5e-9ff2-626e8b307d37: Service # Service
+    60631300-8d0b-495e-9acf-fa5bb515f58a: Bouton # Bouton
+    70974535-ba2b-4447-a30c-4c60444a8285: default # default
+    a00d447a-b2c2-4516-b367-8eeb2c0e8706: Texte # Texte
+    a041f1a4-d36f-4ea5-bfdb-da4981a54929: __blank__ # __blank__
+    a2aa559f-993c-4611-b39c-134a03129bf2: 'Nom de l''entreprise' # Nom de l'entreprise
+    a3e08ab2-22e3-4296-ab5a-caa42413ff7e: 'Terms of service' # Terms of service
+    a8be5932-28fe-4ae6-95bf-0cda113e101d: 'Filtrer par catégories' # Filtrer par catégories
+    a354cb3b-cbe1-4729-b1d5-b75e8674520c: 'Section title' # Section title
+    a530f023-cd09-4dca-babf-de2bb0d2c2d6: Cotent # Cotent
+    a1477a1e-f47d-46d1-bd62-937e55f7d842: Titre # Titre
+    a4557e25-4b31-4946-abb0-2828b2f6bc90: Bouton # Bouton
+    a8207a52-987a-446f-8c5a-db0b8d16192a: SEO # SEO
+    a8699b70-bd28-4aaf-9a65-26b39ba2b577: 'Privacy Policy' # Privacy Policy
+    aaec31ad-2632-481a-a410-8ee0365f3f52: 'Texte descriptif' # Texte descriptif
+    ac4e3752-1654-4c0a-8707-ab4ad35a8227: __blank__ # __blank__
+    ac97ed37-6a36-4f9a-b62a-96d1644180e3: blog # blog
+    ad418d9b-eb32-4d31-954a-2042c82005b2: __blank__ # __blank__
+    af8f7c64-f3e0-45bb-840e-2cb9ff046d62: 'Link Name' # Link Name
+    b1b303eb-e0ec-47a2-8c6f-fc0beb1184e9: Titre # Titre
+    b63d7e4b-2760-4f7e-8e00-5306ed46c5bb: 'Utiliser la politique "Standard"' # Utiliser la politique "Standard"
+    b94d2361-2f9f-4299-b555-47216115e671: 'Nom de la section' # Nom de la section
+    b453c72f-96e0-4f7b-8d5c-f38cba227a1f: Common # Common
+    b1325c5b-ca59-4520-8856-d157caa54354: Titre # Titre
+    b4216e20-2024-4641-b2e0-6fea03312b70: 'Texte descriptif' # Texte descriptif
+    b9682aee-0d11-46e4-8995-291a8ef9bcd1: 'Split Text & Image' # Split Text & Image
+    b85753ce-2412-422a-81d3-2e3ae5447990: Titre # Titre
+    b413777a-2f93-4292-aa8b-42137674aef7: Image # Image
+    b1944974-ef51-4309-8292-c840cfbc40fd: 'Liste des étapes' # Liste des étapes
+    b7222674-a078-4bca-b197-08726377c273: Child1 # Child1
+    b7963565-730b-4128-8610-f11e699dc469: Sous-titre # Sous-titre
+    b8997126-2b51-416b-bd8d-7a7976cdbd86: 'Petit texte' # Petit texte
+    ba7dbc6f-3d26-49a6-bc75-1eef7d0b78bb: __blank__ # __blank__
+    ba826bea-be34-4d09-a3bf-e3dde32cbc03: 'Articles sélectionnés' # Articles sélectionnés
+    bae3979c-6107-4134-811c-51eb6b0d30f9: __blank__ # __blank__
+    bbee99c9-218e-4714-a293-62089bb3e6e1: Titre # Titre
+    bdf4322b-d465-4d1c-b986-e481bd6760d1: newsletter # newsletter
+    bedb88e3-00a5-4a7d-a552-d01c64feb648: Icône # Icône
+    bf16b68f-8fa8-4af1-903c-af57ad76b49b: 'Photo de l''auteur' # Photo de l'auteur
+    bfbdc206-71a1-4b20-a2c9-430845e35847: 'Filtrer par services' # Filtrer par services
+    c0df14a5-2562-420f-a185-980e1f6a9617: 'Social Links' # Social Links
+    c014c55d-c60f-485d-8dd5-c1f793c0929f: common # common
+    c38c2467-684a-4141-ad2a-072110c6d0cb: Jour # Jour
+    c44efbb6-f298-44fd-b3e8-d1eae2d1b5fc: Titre # Titre
+    c73a7672-f911-4a82-9cdb-cab07d1d0f40: Titre # Titre
+    c78e1a46-8743-4116-ae94-c790c501d055: Titre # Titre
+    c94af4f2-3b56-4e40-bc6a-eb3656a4bec3: Description # Description
+    c619f909-093d-458f-9f4f-b27ac6829c22: Titre # Titre
+    c55064f3-8edb-4d7a-8aaa-c88b0b265200: Actualités # Actualités
+    ca952d78-0794-44cf-8bdb-2a4841a2727a: Logo # Logo
+    cbaacd9d-2c6c-4a5f-a250-d32ac899899f: Texte # Texte
+    ce7610ee-0305-48bf-b711-3b4720483a10: Texte # Texte
+    cf64020c-016a-4379-9f47-9c3e603d44f2: 'Couleur de fond' # Couleur de fond
+    d0cbb597-1a24-4a68-beef-b29a78d01f15: Grid # Grid
+    d04babfd-63af-4c0b-b4c4-c1ea303afa19: 'Media relié' # Media relié
+    d3d58485-f5c4-4950-8f74-af2cef3d617a: 'Column Title' # Column Title
+    d8debba7-a41a-4d6f-ba26-dc8c2da7e202: 'Texte descriptif' # Texte descriptif
+    d52f7d2a-6664-481b-8a8d-d22f771f84a5: 'Titre de la section' # Titre de la section
+    d71a30a4-4b44-44a8-86f5-fe7380ea511d: Image # Image
+    d87a2002-794e-414c-bd07-483994262ffc: Liens # Liens
+    d729b2f0-1711-42c1-ba3d-599a5d0328f4: '404' # 404
+    d30437ea-5ccb-43d2-b507-d2e225ed0e46: Footer # Footer
+    dac0ae04-129a-4ba8-b4e7-83a56727f6a9: 'Section text' # Section text
+    dac6acc9-7db1-4604-b10e-605da33fd852: Image # Image
+    dc0b83be-c8da-4217-b335-dab468cefd03: __blank__ # __blank__
+    dc0ba976-45a8-4f4b-b700-7eb55f456e1c: Titre # Titre
+    dc2449de-4eca-4032-900d-23313f316818: Description # Description
+    dd0a4f7b-0f36-4a6a-acff-70814600528c: Bouton # Bouton
+    e0b41c8e-f926-4f1d-a950-e01bf8cbd910: 'Social Links' # Social Links
+    e0141765-d38c-4beb-97af-1684e81bb446: Arguments # Arguments
+    e9d79958-fca2-4caf-9438-fede1c01b543: 'Carousel de produits' # Carousel de produits
+    e84c3f9a-1f55-4085-bb6d-b534395944b2: Text # Text
+    e85be751-0d32-4539-b4d5-b408f3347a9d: meta # meta
+    e100cac4-f5ad-4453-ba09-86eda011ff06: Icone # Icone
+    e264ff12-6961-45db-acb8-698e5bbdfe05: Texte # Texte
+    e536a215-20fc-4e8e-aeae-4d0d9273e55c: 'Terms of service' # Terms of service
+    e23341b7-2175-4bb4-ad24-9697c31a9281: Titre # Titre
+    e80696f6-9bb6-44a5-8f80-5b0e48386298: Bouton # Bouton
+    ea040509-fbaa-4b6e-aeda-cbd13082bd05: Titre # Titre
+    eb6f11fa-2329-4356-8a5e-2132e0209b27: Image # Image
+    eb62aa17-cd99-4a9a-90c1-37aeb715398f: Bouton # Bouton
+    eed3d787-b010-426a-92c7-6adf3b5815e5: 'Twitter Link' # Twitter Link
+    eef159c7-c247-4dc1-b213-b21dea234271: Image # Image
+    efd6f56b-99c9-42ef-ae90-f4658dc521a2: 'SEO Settings' # SEO Settings
+    f1d6bd31-9599-48e2-b5c3-a6ee564bd3c8: 'Introduction aux membres de l''équipe' # Introduction aux membres de l'équipe
+    f4f28abe-bca3-45ec-a3d6-82d84fd47ed9: Description # Description
+    f23ed3fe-a951-4bd3-9ecc-f36de0abaea9: Image # Image
+    f38c8065-06e4-49b1-b7ef-f8a3a4f3e95e: Titre # Titre
+    f44d6270-17e6-4e89-93a6-09a55c2f6a1f: 'Listes des questions' # Listes des questions
+    f284f0d3-5c98-438e-896e-1524c45ee0d6: Titre # Titre
+    f299c3f1-443c-42fc-8077-a35c2ce9cbc6: Logos # Logos
+    f322e36a-55e0-48f3-b795-609c3b97c7da: 'Image détourée du produit (Mobile)' # Image détourée du produit (Mobile)
+    f3159e42-0213-402c-9021-59e3c7371db6: 'Titre principal' # Titre principal
+    f5940ca0-4783-4b91-a60a-27a6bc4fadec: 'Cookie Policy' # Cookie Policy
+    fa7178b8-3453-485c-8ea8-f9a30c902cac: Auteur # Auteur
+    fac8456c-6534-4f9a-9807-07098d89fa4e: Texte # Texte
+    fb28fb7e-0257-4970-ae32-42068a9a63d5: 'Étape de prise en charge' # Étape de prise en charge
+    fc0b9a83-95d2-447c-8329-048fc90348c8: 'Identifier ma douleur' # Identifier ma douleur
+    fc9b6ea4-ccf5-476b-a7d8-e9a18ee54af8: Surtitre # Surtitre
+    fd429933-efbe-4e2b-80a4-5b7bc0989cd3: 'Couleur de fond' # Couleur de fond
+    fe71b05f-fdea-439c-88fe-e8f046d250a8: Titre # Titre
+    ff487aec-cfeb-4d10-9974-1f87618970ff: Texte # Texte
+plugins:
+  async-queue:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: ''
+      prependSubject: 'Nouveau message'
+      successFlashMessage: 'Votre message a été envoyé.'
+      toEmail: $CONTACT_RECIPIENT_ADDRESSES
+  contact-form-extensions:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+    settings:
+      confirmationSubject: ''
+      confirmationTemplate: ''
+      enableConfirmationEmail: ''
+      enableDatabase: '1'
+      enableTemplateOverwrite: ''
+      notificationTemplate: ''
+      recaptcha: ''
+      recaptchaDataBadge: bottomright
+      recaptchaDebug: ''
+      recaptchaHideBadge: ''
+      recaptchaSecretKey: ''
+      recaptchaSiteKey: ''
+      recaptchaThreshold: '0.5'
+      recaptchaTimeout: '5'
+      recaptchaVersion: ''
+  contact-form-honeypot:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  cp-field-inspect:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  craft-slugify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  craftql:
+    enabled: false
+    licenseKey: null
+    schemaVersion: 1.1.0
+    settings: null
+  dashboard-begone:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  eager-beaver:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  embeddedassets:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  field-manager:
+    edition: standard
+    enabled: false
+    schemaVersion: 1.0.0
+  image-resizer:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.0.0
+    settings:
+      assetSourceSettings:
+        1:
+          enabled: '1'
+          imageHeight: ''
+          imageQuality: ''
+          imageWidth: ''
+        2:
+          enabled: '1'
+          imageHeight: ''
+          imageQuality: ''
+          imageWidth: ''
+        3:
+          enabled: '1'
+          imageHeight: ''
+          imageQuality: ''
+          imageWidth: ''
+        4:
+          enabled: '1'
+          imageHeight: ''
+          imageQuality: ''
+          imageWidth: ''
+        5:
+          enabled: '1'
+          imageHeight: ''
+          imageQuality: ''
+          imageWidth: ''
+        6:
+          enabled: '1'
+          imageHeight: ''
+          imageQuality: ''
+          imageWidth: ''
+        7:
+          enabled: '1'
+          imageHeight: ''
+          imageQuality: ''
+          imageWidth: ''
+        8:
+          enabled: '1'
+          imageHeight: ''
+          imageQuality: ''
+          imageWidth: ''
+        9:
+          enabled: '1'
+          imageHeight: ''
+          imageQuality: ''
+          imageWidth: ''
+      enabled: '1'
+      imageHeight: '3280'
+      imageQuality: '100'
+      imageWidth: '3280'
+      nonDestructiveCrop: false
+      nonDestructiveResize: '1'
+      skipLarger: '1'
+  linkit:
+    enabled: false
+    licenseKey: null
+    schemaVersion: 1.0.8
+    settings: null
+  minify:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  neo:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.0
+  position-fieldtype:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  readability:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  recipe:
+    edition: standard
+    enabled: false
+    schemaVersion: 1.0.0
+  redactor:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.3.0
+    settings: null
+  redirect:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.4
+    settings: null
+  retcon:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  retour:
+    edition: standard
+    enabled: false
+    licenseKey: BIQGRAQEI04O9L9Y330J8YST
+    schemaVersion: 3.0.10
+    settings:
+      additionalHeaders: ''
+      alwaysStripQueryString: false
+      automaticallyTrimStatistics: '1'
+      createUriChangeRedirects: true
+      dynamicRedirectDisplayLimit: 100
+      enableApiEndpoint: ''
+      excludePatterns: ''
+      pluginName: 'Redirections 301'
+      preserveQueryString: false
+      recordRemoteIp: true
+      refreshIntervalSecs: 5
+      staticRedirectDisplayLimit: 100
+      statisticsRateLimitMs: '3600000'
+      statsDisplayLimit: 1000
+      statsStoredLimit: 1000
+      stripQueryStringFromStats: true
+      uriChangeRedirectSrcMatch: pathonly
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.1
+  seomatic:
+    enabled: '1'
+    licenseKey: DVFBJAPQAFFQ0FN2H7BTAKPA
+    schemaVersion: 3.0.11
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      alwaysIncludeCanonicalUrls: false
+      cpTitlePrefix: '⚙ '
+      cspNonce: ''
+      cspScriptSrcPolicies:
+        -
+          __assoc__:
+            -
+              - policy
+              - '''self'''
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: ''
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableJsonLdEndpoint: false
+      enableMetaContainerEndpoint: false
+      enableSeoFileLinkEndpoint: false
+      environment: live
+      excludeNonCanonicalUrls: false
+      generatorEnabled: true
+      headersEnabled: true
+      includeHomepageInBreadcrumbs: true
+      lowercaseCanonicalUrl: true
+      manuallySetEnvironment: false
+      maxDescriptionLength: 150
+      maxTitleLength: 70
+      metaCacheDuration: 'null'
+      pluginName: SEOmatic
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+      siteGroupsSeparate: '1'
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
+      truncateDescriptionTags: '1'
+      truncateTitleTags: '1'
+  smith:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  spoon:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  super-table:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 2.2.1
+    settings: null
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typogrify:
+    enabled: '1'
+    licenseKey: null
+    schemaVersion: 1.0.0
+    settings: null
+  webperf:
+    edition: standard
+    enabled: true
+    licenseKey: AIUCWYCNEOO6HAXE5RV73UL5
+    schemaVersion: 1.0.1
+    settings:
+      automaticallyTrimDataSamples: true
+      automaticallyTrimErrorSamples: true
+      connectThreshold: 0.5
+      craftDbMsThreshold: 2
+      craftOtherMsThreshold: 2
+      craftTotalMsThreshold: 2
+      craftTwigMsThreshold: 2
+      dashboardAverageColor: '#ffff00'
+      dashboardFastColor: '#00c800'
+      dashboardSlowColor: '#c80000'
+      dataSamplesStoredLimit: 100000
+      displaySidebar: true
+      dnsThreshold: 0.5
+      domInteractiveThreshold: 5
+      errorSamplesStoredLimit: 1000
+      excludePatterns:
+        -
+          pattern: '/webperf/.*'
+        -
+          pattern: '/cpresources/.*'
+        -
+          pattern: '/retour/.*'
+        -
+          pattern: '/seomatic/.*'
+      filterBotUserAgents: true
+      firstByteThreshold: 2
+      firstContentfulPaintThreshold: 5
+      firstPaintThreshold: 5
+      includeBeacon: true
+      includeCraftProfiling: true
+      includeCraftWarnings: false
+      pageLoadThreshold: 10
+      pluginName: Webperf
+      rateLimitMs: 500
+      samplesRateLimitMs: '3600000'
+      staticCachedSite: false
+      trimOutlierDataSamples: true
+      webpageTestApiKey: ''
+  wheelform:
+    edition: standard
+    enabled: false
+    schemaVersion: 2.0.0
+    settings:
+      cp_label: Forms
+      from_email: register@agencehoffman.com
+      recaptcha_public: ''
+      recaptcha_secret: ''
+      recaptcha_version: '2'
+      success_message: 'Thank You! we will review your submission shortly.'
+      volume_id: ''
+system:
+  edition: solo
+  live: true
+  name: $PROJECT_NAME
+  retryDuration: null
+  schemaVersion: 3.7.33
+  timeZone: America/Toronto
+users:
+  allowPublicRegistration: false
+  defaultGroup: ''
+  photoSubpath: ''
+  photoVolumeUid: 95326dac-96ce-439b-8af1-7af546cf67ef # users
+  requireEmailVerification: true

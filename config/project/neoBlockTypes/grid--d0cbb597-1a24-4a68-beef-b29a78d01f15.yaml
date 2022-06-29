@@ -1,0 +1,21 @@
+childBlocks: ''
+field: 27e3013b-58ea-47ac-893a-9946606fcc55
+fieldLayouts:
+  d43a206a-ac25-4a06-bad4-085c4530872b:
+    tabs:
+      -
+        fields:
+          6fa98816-f710-40b3-960e-f19c5b0e45c0:
+            required: false
+            sortOrder: 1
+          32e7feb2-422c-4c67-82b6-d4d6faee9cdc:
+            required: false
+            sortOrder: 2
+        name: 'Building Blocks - Content'
+        sortOrder: 1
+handle: grid
+maxBlocks: 0
+maxChildBlocks: 0
+name: Grid
+sortOrder: 7
+topLevel: true

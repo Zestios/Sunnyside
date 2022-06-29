@@ -1,0 +1,44 @@
+childBlocks: ''
+field: 27e3013b-58ea-47ac-893a-9946606fcc55
+fieldLayouts:
+  2336a02f-83fb-4e79-9675-2007aa66668f:
+    tabs:
+      -
+        fields:
+          19c73d15-31c6-4ed5-bd19-92193123b040:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+      -
+        fields:
+          98a640de-6f7f-43ad-acb5-ea73b35e1eac:
+            required: false
+            sortOrder: 1
+          100ecd0f-cfbe-409d-9e41-8a54dce4af68:
+            required: false
+            sortOrder: 2
+          b8482c7f-30b1-48b7-a02b-4f388ced24c0:
+            required: false
+            sortOrder: 3
+        name: 'Building Blocks - Animation'
+        sortOrder: 2
+      -
+        fields:
+          611dba8b-7426-4b81-b1dd-8bdc63901abb:
+            required: false
+            sortOrder: 2
+          defab8d2-70f7-4be5-bd1e-5a45b64e917e:
+            required: false
+            sortOrder: 3
+          fe46a1a1-dfc5-4f03-94cb-eff852f1ba15:
+            required: false
+            sortOrder: 1
+        name: 'Building Blocks - Settings'
+        sortOrder: 3
+handle: image
+maxBlocks: 0
+maxChildBlocks: 0
+name: Image
+sortOrder: 4
+topLevel: true

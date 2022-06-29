@@ -1,0 +1,31 @@
+// --------------------------------------------------
+// App
+// --------------------------------------------------
+@import 'common/fonts';
+@import 'common/variables';
+
+// Vendors
+@import 'vendors/01-normalize';
+@import 'vendors/02-flickity';
+@import 'vendors/02.1-flickity-extends';
+@import 'vendors/04.glightbox';
+
+// Common
+@import 'common/base';
+@import 'common/typography';
+@import 'common/btns';
+@import 'common/forms';
+
+// Layouts
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// Partials
+@import 'partials/cookie-policy';
+
+// Components
+
+// Pages
+@import 'pages/home';
+@import 'pages/terms';
+

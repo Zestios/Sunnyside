@@ -1,0 +1,83 @@
+button, input, optgroup, select, textarea {
+  font-family: $fontNexa;
+}
+
+.form-select {
+  width: 100%;
+  border-radius: 15px;
+  padding: 20px 45px 20px 24px;
+  font-weight: bold;
+  border: none;
+  appearance: none;
+  outline: none;
+  background-color: $grey;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCA0Ij48cGF0aCBkPSJNOC41IDEuMjVMNS4wMTggMi45OSAxLjUzNyAxLjI1IiBzdHJva2U9IiM3Mzg3OUEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+");
+  background-size: 7px 7px;
+  background-repeat: no-repeat;
+  background-position: center right 24px;
+}
+
+.input-wrapper {
+  width: 100%;
+  position: relative;
+
+  &:last-child {
+    border: 0;
+  }
+
+  &.light {
+    input, textarea {
+      background: $light;
+    }
+  }
+
+  input, textarea {
+    width: 100%;
+    background: $grey;
+    border-radius: 15px;
+    padding: 27px 24px 10px;
+    font-weight: 800;
+    color: $dark;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    transition: all ease-out .2s;
+    min-height: 55px;
+
+    &::placeholder {
+      opacity: 0;
+      transition: opacity ease-out .2s;
+    }
+
+    &:not(:placeholder-shown), &:focus {
+      & + label {
+        top: 6px;
+        transform: translateY(0);
+      }
+
+      &::placeholder {
+        opacity: 1;
+      }
+    }
+  }
+
+  textarea + label {
+    top: 20px;
+    transform: translateY(0);
+  }
+
+  label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 170%;
+    color: #6E7191;
+    opacity: 1;
+    pointer-events: none;
+    transition: all ease-out .2s;
+  }
+}

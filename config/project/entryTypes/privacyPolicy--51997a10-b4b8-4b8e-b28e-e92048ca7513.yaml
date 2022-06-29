@@ -1,0 +1,106 @@
+fieldLayouts:
+  76cc69b3-baf6-4971-a417-38e0e9aced25:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            style: tip
+            tip: 'Vous avez ici la possibilité d''utiliser une politique de confidentialité générée automatiquement.'
+            type: craft\fieldlayoutelements\Tip
+          -
+            fieldUid: b63d7e4b-2760-4f7e-8e00-5306ed46c5bb # Utiliser la politique "Standard"
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a2aa559f-993c-4611-b39c-134a03129bf2 # Nom de l'entreprise
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 5b5249cd-e29b-46ec-a0a9-a23d52ca7e8c # URL du site web
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 842d1db8-39e4-481a-af8d-a1f3e8c819fa # Courriel de contact
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            style: tip
+            tip: 'Vous pouvez également inclure votre propre politique.'
+            type: craft\fieldlayoutelements\Tip
+          -
+            fieldUid: 2abde05c-e6aa-4e4c-9021-ffa1a26f08ba # Cookie Policy
+            instructions: ''
+            label: 'Politique de confidentialité'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Contenu
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: efd6f56b-99c9-42ef-ae90-f4658dc521a2 # SEO Settings
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 2
+handle: privacyPolicy
+hasTitleField: true
+name: 'Privacy Policy'
+section: a8699b70-bd28-4aaf-9a65-26b39ba2b577 # Privacy Policy
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: language

@@ -1,0 +1,158 @@
+{# Favicons (http://faviconit.com/) #}
+{%- macro favicons() -%}
+
+  {% set baseUrl = alias('@baseUrl') ~ '/' %}
+
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ baseUrl }}img/site/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ baseUrl }}img/site/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ baseUrl }}img/site/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ baseUrl }}img/site/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ baseUrl }}img/site/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ baseUrl }}img/site/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ baseUrl }}img/site/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ baseUrl }}img/site/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ baseUrl }}img/site/apple-touch-icon-180x180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="devmode">
+  <link rel="icon" type="image/png" sizes="228x228" href="{{ baseUrl }}img/site/coast-228x228.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="/img/site/mstile-144x144.png">
+  <meta name="msapplication-config" content="/img/site/browserconfig.xml">
+  <link rel="yandex-tableau-widget" href="{{ baseUrl }}img/site/yandex-browser-manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ baseUrl }}img/site/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ baseUrl }}img/site/favicon-16x16.png">
+  <link rel="shortcut icon" href="{{ baseUrl }}img/site/favicon.ico">
+  <link rel="manifest" href="{{ baseUrl }}webappmanifest.json">
+  <meta name="theme-color" content="#58595b">
+
+{%- endmacro -%}
+
+{# HotJar #}
+{%- macro hotjar() -%}
+
+  {%- set key = craft.app.config.general.apiKeys.hotjar -%}
+  {%- if key is not empty and not craft.app.config.general.devMode -%}
+
+    <script>
+      (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:{{ key }},hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+  {%- endif -%}
+
+{%- endmacro -%}
+
+{# BugHerd #}
+{%- macro bugherd() -%}
+
+  {%- set key = craft.app.config.general.apiKeys.bugherd -%}
+  {%- if key is not empty and craft.app.config.general.devMode -%}
+
+    <script>
+      (function (d, t) {
+        var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        bh.type = 'text/javascript';
+        bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey={{ key }}';
+        s.parentNode.insertBefore(bh, s);
+      })(document, 'script');
+    </script>
+
+  {%- endif -%}
+
+{%- endmacro -%}
+
+{# Optimize Images from optmized image #}
+{%- macro optimizedImages(optimizedImage, size, mode, alt) -%}
+
+  {% set optimizedImages = optimizedImage.optimizedImagesField ?? false %}
+
+  {% if optimizedImages %}
+
+    {% switch mode %}
+
+      {% case "box" %}
+        {% set placeholder = optimizedImages.placeholderBox() %}
+
+      {% case "silhouette" %}
+        {% set placeholder = optimizedImages.placeholderSilhouette() %}
+
+      {% default %}
+        {% set placeholder = optimizedImages.placeholderImage() %}
+
+    {% endswitch %}
+
+    <picture>
+      <source class="image lazyload" data-srcset="{{ optimizedImages.srcsetWebP() }}"
+           sizes="{{ size }}"
+           type="image/webp" />
+      <img class="image lazyload" src="{{ placeholder }}"
+              data-srcset="{{ optimizedImages.srcset() }}"
+              sizes="{{ size }}"
+              alt="{{ alt }}" />
+    </picture>
+
+  {% endif %}
+
+{%- endmacro -%}
+
+{# Optimize Images from optmized image #}
+{%- macro optimizedSquareImages(optimizedImage, size, mode, alt) -%}
+
+  {% set optimizedImages = optimizedImage.optimizedSquareImagesField ?? false %}
+
+  {% if optimizedImages %}
+
+    {% switch mode %}
+
+      {% case "box" %}
+        {% set placeholder = optimizedImages.placeholderBox() %}
+
+      {% case "silhouette" %}
+        {% set placeholder = optimizedImages.placeholderSilhouette() %}
+
+      {% default %}
+        {% set placeholder = optimizedImages.placeholderImage() %}
+
+    {% endswitch %}
+
+    <picture>
+      <source class="image lazyload" data-srcset="{{ optimizedImages.srcsetWebP() }}"
+           sizes="{{ size }}"
+           type="image/webp" />
+      <img class="image lazyload" src="{{ placeholder }}"
+              data-srcset="{{ optimizedImages.srcset() }}"
+              sizes="{{ size }}"
+              alt="{{ alt }}" />
+    </picture>
+
+
+    {#
+      Optimzed Images
+      ----
+      optimizedImages(asset, size, mode, alt)
+      mode: box|silhouette|image
+    #}
+{#    {{ snippet.optimizedImages(article.blogThumbnail.one(), '20vw', 'image', article.title) }}#}
+
+  {% endif %}
+
+{%- endmacro -%}
+
+{# Optimize Images from optmized image #}
+{%- macro siteBtn(text, title, class, href, data, target) -%}
+  <a class="{{class}}"
+    href="{{ href }}"
+    {{ data }}
+    {{ target }}
+    title="{{ title }}"
+    data-track
+    data-action="click"
+    data-bid="[TODO UID]">{{ text }}</a>
+{%- endmacro -%}

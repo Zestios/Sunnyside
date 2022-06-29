@@ -1,0 +1,22 @@
+{
+    "buttons": [
+        "formatting",
+        "bold",
+        "italic",
+        "unorderedlist",
+        "orderedlist",
+        "link",
+        "image",
+        "video"
+    ],
+    "plugins": [
+        "alignment",
+        "table",
+        "fullscreen",
+        "video"
+    ],
+    "toolbarFixed": true,
+    "linkNewTab": true,
+    "imageResizable": true,
+    "imagePosition": true
+}

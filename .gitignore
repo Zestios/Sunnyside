@@ -1,0 +1,75 @@
+# CRAFT ENVIRONMENT
+.env.php
+.env.sh
+.env
+/config/license.key
+
+# SCRIPTS
+/scripts
+
+# COMPOSER
+/vendor
+composer.lock
+
+# CRAFT STORAGE
+/storage/*
+!/storage/.gitkeep
+
+# ASSETS
+/public/assets/*
+/public/css/*
+/public/fonts
+/public/fonts/
+/public/fonts/*
+/public/fonts/**/*
+/public/fonts/**/*/
+/public/img/*
+/public/js/*
+
+# Craft Files (Folders)
+/public/files/**
+!/public/files/**/
+!/public/files/**/.gitkeep
+
+# Craft Files (Transforms)
+/public/files/**/_*/
+
+# BUILD FILES
+/bower_components/*
+/node_modules/*
+/build/*
+/yarn-error.log
+/npm-debug.log
+
+# MISC FILES
+.cache
+.DS_Store
+.idea
+.project
+.settings
+*.esproj
+*.sublime-workspace
+*.sublime-project
+*.tmproj
+*.tmproject
+.vscode/*
+.history/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+config.codekit3
+prepros-6.config
+
+# Vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache

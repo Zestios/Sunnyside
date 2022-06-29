@@ -1,0 +1,12 @@
+<header class="header">
+  {# Locales switcher #}
+  {#      {% for siteForEntry in entry.getSupportedSites %}#}
+  {#        {% set site = craft.app.getSites.getSiteById(siteForEntry.siteId) %}#}
+  {#        {% if site.id != entry.siteId %}#}
+  {#          {% set entryForOtherSite = craft.entries.id(entry.id).site(site).one() %}#}
+  {#          {% if entryForOtherSite is not null %}#}
+  {#            <a class="language-link" href="{{ entryForOtherSite.getUrl() }}">{{ site.handle|upper }}</a>#}
+  {#          {% endif %}#}
+  {#        {% endif %}#}
+  {#      {% endfor %}#}
+</header>

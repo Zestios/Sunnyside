@@ -1,0 +1,87 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{% set entry = craft.entries.section("pageNotFound").limit(1).one() %}
+
+{% extends "_layouts/_layout.twig" %}
+
+{% block content %}
+
+  <style type="text/css">
+    .error-content {
+      height: 100vh;
+      min-height: 375px;
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1473163928189-364b2c4e1135?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    .error-content:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      background-color: rgba(51,62,88,.7);
+    }
+    .error-content .data {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      text-align: center;
+    }
+    .error-content .data .title2 {
+      margin-bottom: 15px;
+      color: #fff;
+      font-family: essonnes-display,sans-serif;
+      font-size: 52px;
+
+
+    }
+    .error-content .data .main-text,
+    .error-content .data a {
+      letter-spacing: .05em;
+      font-weight: 500;
+      color: #fff;
+      margin-top: 10px;
+
+
+    }
+    .error-content .data a {
+      border-bottom: 1px solid #fff;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 599px) {
+      .error-content .data .title2 {
+        font-size: 32px;
+      }
+
+      .error-content .data .main-text,
+      .error-content .data a {
+        font-size: 14px;
+      }
+
+      .error-content .data {
+        width: 100%;
+        padding: 20px;
+      }
+    }
+  </style>
+
+  <section class="error-content">
+    <div class="data">
+      <i class="icon-avion"></i>
+      <h1 class="title2">{{ 'OOPS!'}}</h1>
+      <p class="main-text">{{ 'It\'s looking like you may have taken a wrong turn. Don\'t worry, it happens to the best of us.' }}</p>
+      <a href="/">{{ 'Take me back to the homepage' }}</a>
+    </div>
+  </section>
+{% endblock %}
+
+{% block _inline_js %}
+{% endblock %}

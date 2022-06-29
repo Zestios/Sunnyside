@@ -1,0 +1,19 @@
+columnSuffix: wsdksihk
+contentColumnType: text
+fieldGroup: 2a67fafe-09dd-4dd9-ba28-37349c423d3b # Policies
+handle: policyCompanyName
+instructions: ''
+name: 'Nom de l''entreprise'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\PlainText
