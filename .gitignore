@@ -3,7 +3,6 @@
 .env.sh
 .env
 /config/license.key
-.bob
 
 # SCRIPTS
 /scripts
