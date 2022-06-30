@@ -17,11 +17,30 @@
       font-size: 18px;
       line-height: 25px;
       color: #458D7E;
+      transition: color .3s;
+
+      &:hover {
+        color: #fff;
+      }
     }
   }
 
   .social-links {
     display: flex;
     gap: 30px;
+
+    .link {
+      
+      svg {
+
+        path {
+          transition: fill .3s;
+
+          &:hover {
+            fill: #fff;
+          }
+        }
+      }
+    }
   }
 }

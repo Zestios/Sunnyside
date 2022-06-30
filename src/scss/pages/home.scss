@@ -1,13 +1,15 @@
 .hero {
   background-image: url('/img/image-header.jpg');
-  background-size: contain;
+  background-size: cover;
   background-position: bottom center;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 100px;
+  padding: 32px;
 
   .heading {
     margin-top: 200px;
@@ -18,6 +20,14 @@
     font-weight: 900;
     font-family: $fontFraunces;
     text-transform: uppercase;
+
+    @media (max-width: 800px) {
+      font-size: 40px;
+    }
+  }
+
+  .arrow {
+    cursor: pointer; //Javascript onclick scroll
   }
 }
 
@@ -27,8 +37,16 @@
     width: 100%;
     display: flex;
 
+    @media (max-width: 800px) {
+      flex-direction: column-reverse;
+    }
+
     &:last-of-type {
       flex-direction: row-reverse;
+
+      @media (max-width: 800px) {
+        flex-direction: column-reverse;
+      }
     }
 
     .text-container {
@@ -36,11 +54,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 24px 32px;
 
+      @media (max-width: 800px) {
+        width: 100%;
+        text-align: center;
+        padding: 64px 24px;
+      }
+      
       .text-wrapper {
         width: 100%;
         max-width: 445px;
-        height: 285px;
+        min-height: 285px;
 
         .heading {
           font-family: $fontFraunces;
@@ -48,6 +73,11 @@
           font-size: 40px;
           line-height: 50px;
           color: #24303E;
+
+          @media (max-width: 800px) {
+            font-size: 32px;
+            line-height: 40px;
+          }
         }
     
         .text {
@@ -58,6 +88,11 @@
           color: #808397;
           margin-top: 32px;
           margin-bottom: 40px;
+
+          @media (max-width: 800px) {
+            margin-top: 24px;
+            margin-bottom: 32px;
+          }
         }
     
         .link {
@@ -70,36 +105,34 @@
           text-transform: uppercase;
           padding: 0 8px;
           position: relative;
-
-          &.link-1 {
-
-            &::before {
-              content: "";
-              position: absolute;
-              bottom: -2px;
-              left: 0;
-              height: 10px;
-              width: 100%;
-              background-color: #FAD400;
-              border-radius: 28px;
-              opacity: 0.25;
-            }
+          
+          &:hover::before {
+            opacity: 1;
+          }
+          
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            height: 10px;
+            width: 100%;
+            background-color: #FAD400;
+            border-radius: 28px;
+            opacity: 0.25;
+            transition: ease-in .2s;
           }
 
 
           &.link-2 {
 
             &::before {
-              content: "";
-              position: absolute;
-              bottom: -2px;
-              left: 0;
-              height: 10px;
-              width: 100%;
               background-color: #FE7766;
-              border-radius: 28px;
-              opacity: 0.25;
             }
+          }
+
+          .link-text {
+            position: relative;
           }
         }
       }
@@ -107,6 +140,10 @@
   
     .image-container {
       width: 50%;
+
+      @media (max-width: 800px) {
+        width: 100%;
+      }
   
       .image {
         width: 100%;
@@ -118,17 +155,25 @@
 
 .dual-image-layout {
   width: 100%;
-  height: 600px;
   display: flex;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 
   .column {
     width: 50%;
+    height: 600px;
     position: relative;
-    overflow: hidden;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
 
     .image {
       width: 100%;
-      // height: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .text-container {
@@ -140,6 +185,7 @@
       max-width: 340px;
       height: 140px;
       text-align: center;
+      padding: 0 24px;
 
       .heading {
         font-family: $fontFraunces;
@@ -163,9 +209,13 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 160px;
+  padding: 160px 24px;
   gap: 80px;
   background-color: #FFFCF8;
+
+  @media (max-width: 800px) {
+    padding: 64px 24px;
+  }
 
   .heading {
     font-family: $fontFraunces;
@@ -175,12 +225,22 @@
     letter-spacing: 5px;
     color: #A7AAAD;
     text-transform: uppercase;
-  }
 
+    @media (max-width: 800px) {
+      font-size: 16px;
+    }
+  }
+  
   .row {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 64px;
+    }
 
     .column {
 
@@ -188,18 +248,23 @@
         width: 72px;
         height: 72px;
         border-radius: 50%;
-        margin-bottom: 60px;
       }
 
       .quote {
-        width: 350px;
-        height: 100px;
+        max-width: 350px;
+        max-height: 100px;
         font-family: $fontBarlow;
         font-weight: 600;
         font-size: 18px;
         line-height: 32px;
         color: #5B636D;
+        margin-top: 60px;
         margin-bottom: 70px;
+
+        @media (max-width: 800px) {
+          margin-top: 32px;
+          margin-bottom: 32px;
+        }
       }
 
       .signature {
@@ -227,10 +292,22 @@
 
 .image-gallery {
   width: 100%;
-  height: 447px;
+  min-height: 447px;
   display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
 
   .image {
     width: 25%;
+    transition: transform .3s;
+    transform: scale(1);
+
+    @media (max-width: 1023px) {
+      width: 50%;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
