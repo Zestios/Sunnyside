@@ -158,3 +158,69 @@
     }
   }
 }
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 160px;
+  gap: 80px;
+  background-color: #FFFCF8;
+
+  .heading {
+    font-family: $fontFraunces;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 5px;
+    color: #A7AAAD;
+    text-transform: uppercase;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    .column {
+
+      .image {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        margin-bottom: 60px;
+      }
+
+      .quote {
+        width: 350px;
+        height: 100px;
+        font-family: $fontBarlow;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 32px;
+        color: #5B636D;
+        margin-bottom: 70px;
+      }
+
+      .signature {
+
+        .name {
+          font-family: $fontFraunces;
+          font-weight: 900;
+          font-size: 18px;
+          line-height: 22px;
+          color: #24303E;
+          margin-bottom: 10px;
+        }
+
+        .title {
+          font-family: $fontBarlow;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 25px;
+          color: #A7AAAD;
+        }
+      }
+    }
+  }
+}
